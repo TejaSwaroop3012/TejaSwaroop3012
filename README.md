@@ -1,145 +1,16 @@
-#include<stdio.h>
-#include<stdlib.h>
-struct node
-{
-int data;
-struct node *left,*right;
-};
-struct node *root=NULL;
-int level=-1;
-void create()
-{
-if(root==NULL)
-{
-struct node *temp = (struct node*)malloc(sizeof(struct node));
-int value;
-printf("Enter a value : ");
-scanf("%d",&value);
-temp->data = value;
-temp->left = NULL;
-temp->right = NULL;
-root = temp;
-level = 0;
-}
-else
-{
-printf("Root already exists"); 
-}
-} 
-void Insert()
-{
-if(root==NULL){
-printf("Root is NULL");
-printf("Create the tree to insert elements.");
-create();
-}
-else{
-struct node *temp = (struct node*)malloc(sizeof(struct node));
-int value;
-printf("Enter any value : ");
-scanf("%d",&value);
-temp->data = value;
-temp->left = NULL;
-temp->right = NULL;
-if(root->left == NULL || root->right == NULL)
-{
-if(root->left == NULL){
-root->left = temp;
-}
-else if(root->right == NULL){
-root->right = temp;
-}
-level = 1;
-}
-else if(level ==1 || level == 2)
-{
-if((root->left)->left == NULL){
-(root->left)->left = temp;
-}
-else if((root->left)->right == NULL){
-(root->left)->right = temp;
-}
-else if((root->right)->left == NULL){
-(root->right)->left = temp;
-}
-else if((root->right)->right == NULL){
-(root->right)->right = temp;
-}
-level = 2;
-}
-}
-}
-void preorder(struct node *temp)
-{
-if(temp!=NULL)
-{
-printf("%d ",temp->data);
-if(temp->left)
-preorder(temp->left);
-if(temp->right)
-preorder(temp->right);
-}
-else{
-printf("Cannot display");
-return;
-}
-}
-void inorder(struct node *temp)
-{
-if(temp!=NULL)
-{
-if(temp->left)
-inorder(temp->left);
-printf("%d ",temp->data);
-if(temp->right)
-inorder(temp->right);
-}
-else{
-printf("Cannot display");
-return;
-}
-}
-void postorder(struct node *temp)
-{
-if(temp!=NULL)
-{
-if(temp->left)
-postorder(temp->left);
-if(temp->right)
-postorder(temp->right);
-printf("%d ",temp->data);
-}
-else{
-printf("Cannot display");
-return;
-}
-}
-int main()
-{
-int ch,dis;
-while(1)
-{
-printf("\n1.Create\n2.Insert\n3.Display\n0.EXIT\n");
-printf("Enter your choice : ");
-scanf("%d",&ch);
-switch(ch)
-{
-case 1: create(); break;
-case 2: Insert(); break;
-case 3: printf("1.Preorder\n2.Inorder\n3.Postorder\n");
-printf("Enter your choice : ");
-scanf("%d",&dis);
-switch(dis)
-{
-case 1: preorder(root); break;
-case 2: inorder(root); break;
-case 3: postorder(root); break;
-default : printf("Choose the correct option."); 
-break;
-}
-break;
-case 0: return 0;
-default : printf("Choose the correct option."); break;
-}
-}
-}
+<h1 align="center">Hi ðŸ‘‹, I'm Teja Swaroop</h1>
+<h3 align="center">A passionate developer from India</h3>
+
+- ðŸŒ± Iâ€™m currently learning **Web Development**
+
+- ðŸ“« How to reach me **reddytejaswaroop@gmail.com**
+
+- âš¡ Fun fact **I am funny**
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://instagram.com/teja_swaroop_9876" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="teja_swaroop_9876" height="30" width="40" /></a>
+</p>
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> </p>
