@@ -1,6 +1,6 @@
 <h1 align="center">Hi ðŸ‘‹, I'm Teja Swaroop</h1>
 <h3 align="center">A passionate developer from India</h3>
-
+<img align="right" alt="Coding" Width = "400" src = "https://images.app.goo.gl/23635jv436zDfwmW7">
 - ðŸŒ± Iâ€™m currently learning **Web Development**
 
 - ðŸ“« How to reach me **reddytejaswaroop@gmail.com**
